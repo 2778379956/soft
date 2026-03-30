@@ -16,13 +16,13 @@ jobs:
       - name: Set up Python 3.8 (Win7 compatible)
         uses: actions/setup-python@v5
         with:
-          python-version: '3.8.17'
+          python-version: '3.8.18'
 
       - name: Install dependencies
         run: |
-          pip install opencv-python==4.8.1.78
-          pip install Pillow==10.1.0
-          pip install pyinstaller==6.3.0
+          pip install --timeout=120 opencv-python==4.8.1.78
+          pip install --timeout=120 Pillow==10.1.0
+          pip install --timeout=120 pyinstaller==6.3.0
 
       - name: Build exe with PyInstaller
         run: |
